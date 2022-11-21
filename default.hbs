@@ -67,12 +67,12 @@
             <div class="gh-head-actions">
                 {{#unless @site.members_enabled}}
                     {{^match @custom.navigation_layout "Stacked"}}
-                        <button class="gh-search gh-icon-btn" data-ghost-search>{{> "icons/search"}}</button>
+                        <a href="#contact-form" class="gh-head-btn gh-btn gh-primary-btn">Contact Me</a>
                     {{/match}}
                 {{else}}
                     {{#unless @member}}
                         {{#unless @site.members_invite_only}}
-                            <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                            <a class="gh-head-btn gh-btn gh-primary-btn" href="/#contact" data-portal="signup">Contact</a>
                         {{else}}
                             <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/signin" data-portal="signin">Login</a>
                         {{/unless}}

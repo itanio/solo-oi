@@ -32,11 +32,14 @@
                 {{#if @custom.secondary_header}}
                     <p class="gh-about-secondary">{{{@custom.secondary_header}}}</p>
                 {{/if}}
+                <p class="gh-about-secondary">As a <strong>user experience expert</strong>, <strong>product manager</strong> and <strong>web/mobile developer</strong>, I have more than 15 years of experience and have held senior technical roles at <strong>Google</strong> and <strong>Al Jazeera.</strong></p>
+                <p class="gh-about-secondary">My goal is always that the sites and apps I build are wonderful, usable, and <strong>successful beyond expectations.</strong></p>
+                <p class="gh-about-secondary gh-about-cta">Interested in working together? <a href="#contact-form">Contact me</a> and let's get started!</p>
                 {{#if @site.members_enabled}}
                     {{#unless @member}}
                         <div class="gh-subscribe-input" data-portal>
-                            jamie@example.com
-                            <span class="gh-btn gh-primary-btn">Subscribe</span>
+                            you@example.com
+                            <span class="gh-btn gh-primary-btn">Contact</span>
                         </div>
                     {{/unless}}
                 {{/if}}
@@ -46,10 +49,27 @@
 </section>
 
 <main class="gh-main gh-outer">
-    <div class="gh-feed gh-inner">
-        {{#foreach posts}}
-            {{> "loop"}}
-        {{/foreach}}
+    
+    <section id="featured-work">
+        <h2>Featured work</h2>
+        <div class="gh-feed gh-inner">
+            {{#foreach posts}}
+                {{> "loop"}}
+            {{/foreach}}
+        </div>
+    </section>
+    <h2>Contact me</h2>
+    <div id="contact-form">
+<form action="https://getform.io/f/987c8ef1-037c-44aa-91d0-51c80cb0a0c5" method="POST">
+            <label for="full-name">Name</label>
+            <input type="text" name="name" id="full-name" placeholder="Your full name" required>
+            <label for="email-address">Email Address</label>
+            <input type="email" name="_replyto" id="email-address" placeholder="Your email address" required>
+            <label for="message">Your Message</label>
+            <textarea rows="5" name="message" id="message" placeholder="Your message" required></textarea>
+            <input type="hidden" name="_gotcha" style="display:none !important">
+            <input class="gh-btn gh-primary-btn " type="submit" value="Submit">
+        </form>
     </div>
 </main>
 
