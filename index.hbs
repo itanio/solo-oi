@@ -33,7 +33,7 @@
                     <p class="gh-about-secondary">{{{@custom.secondary_header}}}</p>
                 {{/if}}
                 <p class="gh-about-secondary">As a <strong>user experience expert</strong>, <strong>product manager</strong> and <strong>web/mobile developer</strong>, I have more than 15 years of experience and have held senior technical roles at <strong>Google</strong> and <strong>Al Jazeera.</strong></p>
-                <p class="gh-about-secondary">My goal is always that the sites and apps I build are wonderful, usable, and <strong>successful beyond expectations.</strong></p>
+                <p class="gh-about-secondary">My goal is simple: to build <strong>online experiences</strong> that are wonderful, usable, and <strong>successful beyond expectations.</strong></p>
                 <p class="gh-about-secondary gh-about-cta">Interested in working together? <a href="#contact-form">Contact me</a> and let's get started!</p>
                 {{#if @site.members_enabled}}
                     {{#unless @member}}
@@ -51,26 +51,35 @@
 <main class="gh-main gh-outer">
     
     <section id="featured-work">
-        <h2>Featured work</h2>
         <div class="gh-feed gh-inner">
+            <h2 class="section-title"><span class="green-highlight">Featured work</span></h2>
             {{#foreach posts}}
                 {{> "loop"}}
             {{/foreach}}
         </div>
     </section>
-    <h2>Contact me</h2>
-    <div id="contact-form">
-<form action="https://getform.io/f/987c8ef1-037c-44aa-91d0-51c80cb0a0c5" method="POST">
-            <label for="full-name">Name</label>
-            <input type="text" name="name" id="full-name" placeholder="Your full name" required>
-            <label for="email-address">Email Address</label>
-            <input type="email" name="_replyto" id="email-address" placeholder="Your email address" required>
-            <label for="message">Your Message</label>
-            <textarea rows="5" name="message" id="message" placeholder="Your message" required></textarea>
-            <input type="hidden" name="_gotcha" style="display:none !important">
-            <input class="gh-btn gh-primary-btn " type="submit" value="Submit">
-        </form>
-    </div>
+    <section id="media-appearances">
+        <div class="gh-feed gh-inner">
+            <h2 class="section-title"><span class="green-highlight">Media appearances</span></h2>
+            <h3>Think with Google</h3>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/uyqw30xbBV0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+    <section id="contact-form">
+        <div class="gh-inner">
+            <h2 class="section-title green-highlight">Contact me</h2>
+            <form class="contact-form" action="https://getform.io/f/987c8ef1-037c-44aa-91d0-51c80cb0a0c5" method="POST">
+                <label for="full-name">Name</label>
+                <input type="text" name="name" id="full-name" placeholder="Your name" required>
+                <label for="email-address">Email</label>
+                <input type="email" name="_replyto" id="email-address" placeholder="Your email" required>
+                <label for="message">Message</label>
+                <textarea rows="5" name="message" id="message" placeholder="Let me know what's happening" required></textarea>
+                <input type="hidden" name="_gotcha" style="display:none !important">
+                <input class="gh-btn gh-primary-btn " type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
 </main>
 
 {{#contentFor "body_class"}}{{#match @custom.header_section_layout "Side by side"}} has-side-about{{/match}}{{#match @custom.header_section_layout "Large background"}}{{#if @site.cover_image}} is-head-transparent has-background-about{{else}} has-side-about{{/if}}{{/match}}{{#match @custom.header_section_layout "Typographic profile"}}{{#if @site.icon}} has-typographic-about{{else}} has-side-about{{/if}}{{/match}}{{/contentFor}}

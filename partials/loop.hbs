@@ -21,13 +21,14 @@
 
         <div class="gh-card-wrapper">
             <h2 class="gh-card-title">{{title}}</h2>
-            {{#match @custom.post_feed_layout "Typographic"}}
-                {{#if custom_excerpt}}
-                    <p class="gh-card-excerpt">{{excerpt}}</p>
-                {{/if}}
-            {{/match}}
+            {{#if custom_excerpt}}
+                <p class="gh-card-excerpt">{{excerpt}}</p>
+            {{/if}}
             <footer class="gh-card-meta">
-                <time class="gh-card-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+                
+                {{#if primary_tag}}
+                    <span class="post-primary-tag" style="--tag-color: {{primary_tag.accent_color}}">{{primary_tag.name}}</p>
+                {{/if}}
                 {{#if reading_time}}
                     <span class="gh-card-length">{{reading_time}}</span>
                 {{/if}}
